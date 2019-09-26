@@ -1,8 +1,11 @@
 package entidades;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Cliente {
+	
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
 	//atributos
 	private String nome;
@@ -45,5 +48,8 @@ public class Cliente {
 		this.nascimento = nascimento;
 	}
 	
+	public String toString () {
+		return nome + " (" +sdf.format(nascimento)+ ") - " + email;
+	}
 	
 }
