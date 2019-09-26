@@ -47,7 +47,7 @@ public class Cliente {
 	public void setNascimento(Date nascimento) {
 		this.nascimento = nascimento;
 	}
-	
+	@Override
 	public String toString () {
 		return nome + " (" +sdf.format(nascimento)+ ") - " + email;
 	}
